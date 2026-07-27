@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.lab_activity_2.ui.theme.ProfileTheme
@@ -49,8 +50,11 @@ fun ProfileScreen() {
         Text(
             text = "Mike Janzen M Agcopra",
             style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.primary
         )
+
+        Spacer(modifier = Modifier.height(4.dp))
         
         Text(
             text = "BSIT 3-1",
@@ -75,21 +79,25 @@ fun ProfileScreen() {
                     label = "Full Name",
                     value = "Mike Janzen M Agcopra"
                 )
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), thickness = 0.5.dp, color = MaterialTheme.colorScheme.outlineVariant)
                 InfoRow(
                     icon = Icons.Default.School,
                     label = "Course",
                     value = "BSIT"
                 )
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), thickness = 0.5.dp, color = MaterialTheme.colorScheme.outlineVariant)
                 InfoRow(
                     icon = Icons.Default.Class,
                     label = "Section",
                     value = "BSIT 3-1"
                 )
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), thickness = 0.5.dp, color = MaterialTheme.colorScheme.outlineVariant)
                 InfoRow(
                     icon = Icons.Default.Phone,
                     label = "Mobile Number",
                     value = "09361969247"
                 )
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), thickness = 0.5.dp, color = MaterialTheme.colorScheme.outlineVariant)
                 InfoRow(
                     icon = Icons.Default.Email,
                     label = "Email Address",
@@ -100,7 +108,7 @@ fun ProfileScreen() {
     }
 }
 
-// Task 5 — Reusable InfoRow
+// 5
 @Composable
 fun InfoRow(icon: ImageVector, label: String, value: String) {
     Row(
@@ -130,7 +138,7 @@ fun InfoRow(icon: ImageVector, label: String, value: String) {
     }
 }
 
-// Task 6 — Verify light AND dark
+//6
 @Preview(name = "Profile — Light", showBackground = true)
 @Composable
 fun ProfileScreenLightPreview() {

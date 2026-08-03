@@ -1,4 +1,4 @@
-package com.example.grocerylist   // <-- use YOUR package name
+package com.example.myapplication
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -48,14 +48,32 @@ fun GroceryListApp() {
             )
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = {
-                groceries.add(newItem)   // add typed text to the list
-                newItem = ""             // clear the input box
+                if (newItem.isNotBlank()) {
+                    groceries.add(newItem.trim())   // Challenge 1: Trim and ignore blank
+                    newItem = ""
+                }
             }) {
                 Text("Add")
             }
         }
 
         Spacer(modifier = Modifier.height(16.dp))
+
+        // Challenge 2 & Bonus: Item Count and Clear All
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(text = "Total items: ${groceries.size}", fontSize = 16.sp)
+            if (groceries.isNotEmpty()) {
+                TextButton(onClick = { groceries.clear() }) {
+                    Text("Clear All", color = MaterialTheme.colorScheme.error)
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         // ---- 3. LIST + DELETE EVENT ----
         LazyColumn {
@@ -74,5 +92,3 @@ fun GroceryListApp() {
         }
     }
 }
-
-

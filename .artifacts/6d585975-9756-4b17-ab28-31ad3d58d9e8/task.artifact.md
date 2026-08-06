@@ -1,0 +1,7 @@
+- [ ] Update `app/build.gradle.kts` with dependencies and plugins
+- [ ] Create `Routes.kt` for type-safe routes
+- [ ] Create `Screens.kt` for UI composables
+- [ ] Update `MainActivity.kt` with `NavHost`
+- [ ] Verify build and run the app
+- [ ] Capture screenshot and save to `screenshots/greeting_screenshot.png`
+- [ ] Commit and push changes to `lab-activity-7`

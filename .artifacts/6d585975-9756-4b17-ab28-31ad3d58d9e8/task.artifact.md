@@ -1,7 +1,7 @@
-- [ ] Update `app/build.gradle.kts` with dependencies and plugins
-- [ ] Create `Routes.kt` for type-safe routes
-- [ ] Create `Screens.kt` for UI composables
-- [ ] Update `MainActivity.kt` with `NavHost`
-- [ ] Verify build and run the app
-- [ ] Capture screenshot and save to `screenshots/greeting_screenshot.png`
-- [ ] Commit and push changes to `lab-activity-7`
+- [x] Update `app/build.gradle.kts` with dependencies and plugins
+- [x] Create `Routes.kt` for type-safe routes
+- [x] Create `Screens.kt` for UI composables
+- [x] Update `MainActivity.kt` with `NavHost`
+- [x] Verify build and run the app
+- [x] Capture screenshot and save to `screenshots/greeting_screenshot.png`
+- [x] Commit and push changes to `lab-activity-7` (Committed, but push skipped as origin not set)

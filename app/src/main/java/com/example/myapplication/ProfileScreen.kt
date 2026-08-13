@@ -63,7 +63,7 @@ fun ProfileForm(state: ProfileUiState, viewModel: ProfileViewModel) {
         Spacer(Modifier.height(16.dp))
         Text("Skills", fontWeight = FontWeight.Bold)
 
-        // Type a skill + Add button
+
         Row(verticalAlignment = Alignment.CenterVertically) {
             OutlinedTextField(
                 value = state.newSkill,
@@ -77,7 +77,7 @@ fun ProfileForm(state: ProfileUiState, viewModel: ProfileViewModel) {
             }
         }
 
-        // One row per skill, each with a Remove button
+
         state.skills.forEach { skill ->
             Row(
                 verticalAlignment = Alignment.CenterVertically,
